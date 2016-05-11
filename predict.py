@@ -51,6 +51,7 @@ while True:
     img = cv2.resize(img,(640,360))
     cv2.imwrite('buf.jpg',img)
     result = api.recognition.identify(img = File('buf.jpg'), group_name = 'test')
+    #print_result('',result)
     if len(result['face'])==0:
         print 'no face\n'
         continue
@@ -59,6 +60,8 @@ while True:
     myface = result['face'][0]
     name = myface['candidate'][0]['person_name']
     conf = myface['candidate'][0]['confidence']
+    face_id = myface['face_id']
+    #api.person.add_face(person_name = name, face_id = face_id)
     rects = []
     center = (myface['position']['center']['x'],myface['position']['center']['y'])
     height = myface['position']['height']
@@ -69,11 +72,33 @@ while True:
     y2 = int((center[1]+height/2)*img.shape[0]/100)
     rects.append((x1,y1,x2,y2))
     draw_rects(img,rects,(0,255,0))
+    rects = []
+    center = (myface['position']['eye_left']['x'],myface['position']['eye_left']['y'])
+    x1 = int(center[0]*img.shape[1]/100)-10
+    x2 = x1+20
+    y1 = int(center[1]*img.shape[0]/100)-10
+    y2 = y1+20
+    rects.append((x1,y1,x2,y2))
+    center = (myface['position']['eye_right']['x'],myface['position']['eye_right']['y'])
+    x1 = int(center[0]*img.shape[1]/100)-10
+    x2 = x1+20
+    y1 = int(center[1]*img.shape[0]/100)-10
+    y2 = y1+20
+    rects.append((x1,y1,x2,y2))
+    draw_rects(img,rects,(255,0,0))
     cv2.putText(img,name+'   '+str(conf),(x1,y1-10),cv2.FONT_HERSHEY_COMPLEX,0.6,(0,255,0))
     cv2.imshow('go',img)
     key = cv2.waitKey(1)
     if key==27:
         break
 
+result = api.recognition.train(group_name = 'test', type = 'all')
+session_id = result['session_id']
+while True:
+    result = api.info.get_session(session_id = session_id)
+    if result['status'] == u'SUCC':
+        print_result('Async train result:', result)
+        break
+    time.sleep(1)
 cam.release()
 cv2.destroyAllWindows()

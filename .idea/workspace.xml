@@ -2,59 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a32d1a6-3bdb-42ce-b31c-4d81b19068d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/buf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/facepp_cmdtool_win32/files" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/momFace/img6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myFaces/img9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/faceRec.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmdtool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/apikey.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/python-dist/facepp_cmdtool_python/apikey.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/python-dist/facepp_cmdtool_python/cmdtool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/python-dist/facepp_cmdtool_python/facepp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/python-dist/facepp_cmdtool_python/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/apikey.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/build.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/cmdtool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/facepp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/facepp_cmdtool_win32/apikey.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/facepp_cmdtool_win32/cmdtool.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/win32-dist/setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facepp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fppapp.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/func.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/haarcascade_frontalface_alt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/haarcascade_frontalface_alt2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hello.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/matconvert.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/predict.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/record.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simplerec.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buf.jpg" afterPath="$PROJECT_DIR$/buf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facepp-python-sdk-2.0/apikey.cfg" afterPath="$PROJECT_DIR$/facepp-python-sdk-2.0/apikey.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predict.py" afterPath="$PROJECT_DIR$/predict.py" />
     </list>
     <ignored path="faceRec.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +20,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/faceRec$fppapp.coverage" NAME="fppapp Coverage Results" MODIFIED="1462982782577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/faceRec$predict.coverage" NAME="predict Coverage Results" MODIFIED="1462985206380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/faceRec$predict.coverage" NAME="predict Coverage Results" MODIFIED="1462987879151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/faceRec$hello.coverage" NAME="hello Coverage Results" MODIFIED="1462977929820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/faceRec$test.coverage" NAME="test Coverage Results" MODIFIED="1462899602216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/faceRec$simplerec.coverage" NAME="simplerec Coverage Results" MODIFIED="1462978619264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -170,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/fppapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+              <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
               <folding>
                 <element signature="e#554#565#0" expanded="true" />
               </folding>
@@ -181,8 +132,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45043105">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.66883117">
+              <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
               <folding>
                 <element signature="e#188#199#0" expanded="true" />
               </folding>
@@ -593,6 +544,13 @@
       <option name="number" value="Default" />
       <updated>1462891315748</updated>
     </task>
+    <task id="LOCAL-00001" summary="init&#10;">
+      <created>1462985827334</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462985827334</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -608,28 +566,41 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33013698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33013698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="init&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -724,6 +695,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33261338">
           <caret line="2196" column="4" selection-start-line="2196" selection-start-column="4" selection-end-line="2196" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -784,6 +756,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +783,7 @@
     <entry file="file://$PROJECT_DIR$/fppapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
           <folding>
             <element signature="e#554#565#0" expanded="true" />
           </folding>
@@ -819,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45043105">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66883117">
+          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
           <folding>
             <element signature="e#188#199#0" expanded="true" />
           </folding>
