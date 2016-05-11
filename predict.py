@@ -73,20 +73,21 @@ while True:
     rects.append((x1,y1,x2,y2))
     draw_rects(img,rects,(0,255,0))
     rects = []
+    cv2.putText(img,name+'   '+str(conf),(x1,y1-10),cv2.FONT_HERSHEY_COMPLEX,0.6,(0,255,0))
     center = (myface['position']['eye_left']['x'],myface['position']['eye_left']['y'])
-    x1 = int(center[0]*img.shape[1]/100)-10
-    x2 = x1+20
-    y1 = int(center[1]*img.shape[0]/100)-10
-    y2 = y1+20
+    x1 = int(center[0]*img.shape[1]/100)-15
+    x2 = x1+30
+    y1 = int(center[1]*img.shape[0]/100)-15
+    y2 = y1+30
     rects.append((x1,y1,x2,y2))
     center = (myface['position']['eye_right']['x'],myface['position']['eye_right']['y'])
-    x1 = int(center[0]*img.shape[1]/100)-10
-    x2 = x1+20
-    y1 = int(center[1]*img.shape[0]/100)-10
-    y2 = y1+20
+    x1 = int(center[0]*img.shape[1]/100)-15
+    x2 = x1+30
+    y1 = int(center[1]*img.shape[0]/100)-15
+    y2 = y1+30
     rects.append((x1,y1,x2,y2))
     draw_rects(img,rects,(255,0,0))
-    cv2.putText(img,name+'   '+str(conf),(x1,y1-10),cv2.FONT_HERSHEY_COMPLEX,0.6,(0,255,0))
+
     cv2.imshow('go',img)
     key = cv2.waitKey(1)
     if key==27:

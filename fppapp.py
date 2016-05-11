@@ -34,36 +34,35 @@ def print_result(hint, result):
 # First import the API class from the SDK
 # 首先，导入SDK中的API类
 from facepp import API,File
+import cv2
 
+
+cam = cv2.VideoCapture(0)
 api = API(API_KEY, API_SECRET)
 
 # Here are the person names and their face images
 # 人名及其脸部图片
-PERSONS = [
-    ('Alvin', 'myFaces/'),
-    ('Sean', 'momFace/')
-]
-TARGET_IMAGE = 'myFaces/img10.jpg'
+PERSON = 'Kang'
 
-# Step 1: Create a group to add these persons in
-# 步骤1： 新建一个group用以添加person
-api.group.create(group_name = 'test')
 
-# Step 2: Detect faces from those three images and add them to the persons
-# 步骤2：从三种图片中检测人脸并将其加入person中。
-for (name, url) in PERSONS:
-    api.person.create(person_name = name, group_name = 'test')
-    for i in range(1,6):
-        img = url+'img%d.jpg'%i
-        result = api.detection.detect(img = File(img), mode = 'oneface')
-        print_result('Detection result for {}:'.format(name), result)
+api.person.create(person_name = PERSON, group_name = 'test')
+while True:
+    ret, img = cam.read()
+    img = cv2.resize(img,(640,360))
+    cv2.imwrite('buf.jpg',img)
+    cv2.imshow('go',img)
+    key = cv2.waitKey(1)
+    if key == 27:
+        break
+    if key != 99:
+        continue
 
-        face_id = result['face'][0]['face_id']
+    result = api.detection.detect(img = File('buf.jpg'), mode = 'oneface')
+    print_result('Detection result for {}:'.format(PERSON), result)
 
-        # Create a person in the group, and add the face to the person
-        # 在该group中新建一个person，并将face加入期中
-        api.person.add_face(person_name = name,
-                face_id = face_id)
+    face_id = result['face'][0]['face_id']
+
+    api.person.add_face(person_name = PERSON, face_id = face_id)
 
 
 # Step 3: Train the group.
@@ -89,26 +88,5 @@ while True:
         break
     time.sleep(1)
 
-#也可以通过调用api.wait_async(session_id)函数完成以上功能
-
-
-# Step 4: recognize the unknown face image
-# 步骤4：识别未知脸部图片
-result = api.recognition.recognize(img = File(TARGET_IMAGE), group_name = 'test')
-print_result('Recognize result:', result)
-print '=' * 60
-print 'The person with highest confidence:', \
-        result['face'][0]['candidate'][0]['person_name']
-
-
-# Finally, delete the persons and group because they are no longer needed
-# 最终，删除无用的person和group
-#api.group.delete(group_name = 'test')
-#api.person.delete(person_name = [i[0] for i in PERSONS])
-
-# Congratulations! You have finished this tutorial, and you can continue
-# reading our API document and start writing your own App using Face++ API!
-# Enjoy :)
-# 恭喜！您已经完成了本教程，可以继续阅读我们的API文档并利用Face++ API开始写您自
-# 己的App了！
-# 旅途愉快 :)
+cam.release()
+cv2.destroyAllWindows()
