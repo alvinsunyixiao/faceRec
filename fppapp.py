@@ -31,21 +31,21 @@ def print_result(hint, result):
     result = encode(result)
     print '\n'.join(['  ' + i for i in pformat(result, width = 75).split('\n')])
 
-# First import the API class from the SDK
-# 首先，导入SDK中的API类
+
 from facepp import API,File
-import cv2
 
 
 cam = cv2.VideoCapture(0)
 api = API(API_KEY, API_SECRET)
 
-# Here are the person names and their face images
-# 人名及其脸部图片
-PERSON = 'Kang'
 
+PERSON = 'Veronica Du'
 
-api.person.create(person_name = PERSON, group_name = 'test')
+try:
+    api.person.create(person_name = PERSON, group_name = 'test')
+except:
+    pass
+
 while True:
     ret, img = cam.read()
     img = cv2.resize(img,(640,360))
@@ -59,22 +59,16 @@ while True:
 
     result = api.detection.detect(img = File('buf.jpg'), mode = 'oneface')
     print_result('Detection result for {}:'.format(PERSON), result)
-
+    if len(result['face'])==0:
+        continue
     face_id = result['face'][0]['face_id']
 
     api.person.add_face(person_name = PERSON, face_id = face_id)
 
 
-# Step 3: Train the group.
-# Note: this step is required before performing recognition in this group,
-# since our system needs to pre-compute models for these persons
-# 步骤3：训练这个group
-# 注：在group中进行识别之前必须执行该步骤，以便我们的系统能为这些person建模
+
 result = api.recognition.train(group_name = 'test', type = 'all')
 
-# Because the train process is time-consuming, the operation is done
-# asynchronously, so only a session ID would be returned.
-# 由于训练过程比较耗时，所以操作必须异步完成，因此只有session ID会被返回
 print_result('Train result:', result)
 
 session_id = result['session_id']
