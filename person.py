@@ -5,6 +5,7 @@ API_KEY = 'ae397874d1b74db82804dcfb67d7a249'
 API_SECRET = 'kDH7U5ggdkDLPSLy27Tz-eXRZWJwTOKm'
 
 from pprint import pformat
+import picamera
 
 def capture_face(api,dir):
     result = api.detection.detect(img = File(dir), mode = 'oneface')
@@ -15,9 +16,7 @@ def capture_face(api,dir):
 
 def recgonize(cam, dir = 'buf.jpg'):
     api = API(API_KEY, API_SECRET)
-    ret, img = cam.read()
-    img = cv2.resize(img,(640,360))
-    cv2.imwrite(dir,img)
+    cam.capture(dir)
     result = api.recognition.identify(img = File(dir), group_name = 'test')
     if (len(result['face'])==0):
         return None
@@ -49,28 +48,17 @@ class Person:
         result = encode(result)
         print '\n'.join(['  ' + i for i in pformat(result, width = 75).split('\n')])
 
-    def capture(self,cam):
-        ret, img = cam.read()
-        img = cv2.resize(img,(640,360))
-        cv2.imwrite(self.bufferDir,img)
-        return img
 
     def train(self):
-        cam = cv2.VideoCapture(0)
-        while True:
-            img = self.capture(cam)
-            cv2.imshow('go',img)
-            key = cv2.waitKey(1)
-            if key==27:
-                break
-            if not key==99:
-                continue
+        cam = picamera.PiCamera()
+	while True:
+            cam.capture(self.bufferDir)
             result = capture_face(self.api,self.bufferDir)
             if result == None:
                 continue
             face_id = result['face'][0]['face_id']
             self.api.person.add_face(person_name = self.name, face_id = face_id)
-        cam.release()
+        cam.close()
         result = self.api.recognition.train(group_name = 'test', type = 'all')
         session_id = result['session_id']
         while True:
