@@ -12,11 +12,12 @@ aperson.train()
 '''
 from person import recgonize
 
-for i in range(10):
-    result = recgonize(cam)
-    if result==None:
-        continue
-    (name, confidence) = result
-    print name + '    ' + str(confidence)
-cam.close()
-
+try:
+    for i in range(10):
+        result = recgonize(cam)
+        if result==None:
+            continue
+        (name, confidence) = result
+        print name + '    ' + str(confidence)
+except KeyboardInterrupt:
+    cam.close()
