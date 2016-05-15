@@ -6,7 +6,7 @@ import picamera
 cam = picamera.PiCamera()
 cam.resolution = (640,480)
 '''
-aperson = Person('Nancy Wang')
+aperson = Person('Alvin',cam)
 aperson.train()
 
 '''
@@ -19,3 +19,4 @@ for i in range(10):
     (name, confidence) = result
     print name + '    ' + str(confidence)
 cam.close()
+

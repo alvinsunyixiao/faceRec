@@ -5,7 +5,7 @@ API_KEY = 'ae397874d1b74db82804dcfb67d7a249'
 API_SECRET = 'kDH7U5ggdkDLPSLy27Tz-eXRZWJwTOKm'
 
 from pprint import pformat
-import picamera
+#import picamera
 
 def capture_face(api,dir):
     result = api.detection.detect(img = File(dir), mode = 'oneface')
@@ -26,10 +26,11 @@ def recgonize(cam, dir = 'buf.jpg'):
     return (name,confidence)
 
 class Person:
-    def __init__(self,name,bufferDir = 'buf.jpg'):
+    def __init__(self,name,cam,bufferDir = 'buf.jpg'):
         self.name = name
         self.api = API(API_KEY, API_SECRET)
         self.bufferDir = bufferDir
+        self.cam = cam
         try:
             self.api.person.create(person_name = name, group_name = 'test')
         except:
@@ -50,15 +51,14 @@ class Person:
 
 
     def train(self):
-        cam = picamera.PiCamera()
-	while True:
-            cam.capture(self.bufferDir)
+	for i in range(10):
+	    print i
+            self.cam.capture(self.bufferDir)
             result = capture_face(self.api,self.bufferDir)
             if result == None:
                 continue
             face_id = result['face'][0]['face_id']
             self.api.person.add_face(person_name = self.name, face_id = face_id)
-        cam.close()
         result = self.api.recognition.train(group_name = 'test', type = 'all')
         session_id = result['session_id']
         while True:
