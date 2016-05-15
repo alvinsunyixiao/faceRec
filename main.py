@@ -12,6 +12,7 @@ try:
     while 1:
         result = recgonize(cam)
         if result == None:
+            print 'no face'
             continue
         (name, confidence) = result
         print name + '    ' + str(confidence)
