@@ -10,14 +10,3 @@ aperson = Person('Alvin',cam)
 aperson.train()
 
 '''
-from person import recgonize
-
-try:
-    for i in range(10):
-        result = recgonize(cam)
-        if result==None:
-            continue
-        (name, confidence) = result
-        print name + '    ' + str(confidence)
-except KeyboardInterrupt:
-    cam.close()
