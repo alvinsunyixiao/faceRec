@@ -8,7 +8,7 @@ cam = picamera.PiCamera()
 cam.resolution = (640,480)
 ser = serial.Serial('/dev/ttyACM0',9600)
 from person import recgonize
-
+thresh = 60
 try:
     while 1:
         result = recgonize(cam)
@@ -17,7 +17,7 @@ try:
             ser.write('noface')
             continue
         (name, confidence) = result
-        if confidence<=60:
+        if confidence<=thresh:
             ser.write('unkown')
         else:
             ser.write(name)

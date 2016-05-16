@@ -49,12 +49,12 @@ TARGET_IMAGE = 'http://www.faceplusplus.com/static/img/demo/13.jpg'
 api.group.create(group_name = 'test')
 
 # Step 2: Detect faces from those three images and add them to the persons
-# 步骤2：从三种图片中检测人脸并将其加入person中。 
+# 步骤2：从三种图片中检测人脸并将其加入person中。
 for (name, url) in PERSONS:
     result = api.detection.detect(url = url, mode = 'oneface')
     print_result('Detection result for {}:'.format(name), result)
 
-    face_id = result['face'][0]['face_id'] 
+    face_id = result['face'][0]['face_id']
 
     # Create a person in the group, and add the face to the person
     # 在该group中新建一个person，并将face加入期中
