@@ -51,14 +51,16 @@ class Person:
 
 
     def train(self):
-	for i in range(10):
-	    print i
+        i=0
+        while i < 10:
+    	    print i
             self.cam.capture(self.bufferDir)
             result = capture_face(self.api,self.bufferDir)
             if result == None:
                 continue
             face_id = result['face'][0]['face_id']
             self.api.person.add_face(person_name = self.name, face_id = face_id)
+            i+=1
         result = self.api.recognition.train(group_name = 'test', type = 'all')
         session_id = result['session_id']
         while True:
@@ -67,4 +69,3 @@ class Person:
                 self.print_result('Async train result:', result)
                 break
             time.sleep(1)
-
