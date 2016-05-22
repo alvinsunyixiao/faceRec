@@ -8,19 +8,20 @@ cam = picamera.PiCamera()
 cam.resolution = (640,480)
 ser = serial.Serial('/dev/ttyACM0',9600)
 from person import recgonize
-thresh = 60
+thresh = 65
 try:
     while 1:
         result = recgonize(cam)
         if result == None:
             print 'no face'
-            ser.write('noface')
+            ser.write('noface\n')
             continue
         (name, confidence) = result
         if confidence<=thresh:
-            ser.write('unkown')
+            ser.write('unkown\n')
         else:
-            ser.write(name)
+            ser.write(name+'\n')
         print name + '    ' + str(confidence)
 except KeyboardInterrupt:
     cam.close()
+    ser.close()
