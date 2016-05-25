@@ -3,10 +3,13 @@ import numpy as np
 import os,time
 from person import Person
 import serial
-import picamera
+#import picamera
+'''
 cam = picamera.PiCamera()
 cam.resolution = (640,480)
-ser = serial.Serial('/dev/ttyACM0',9600)
+'''
+cam = cv2.VideoCapture(0)
+ser = serial.Serial('/dev/cu.usbmodem1411',9600)
 from person import recgonize
 thresh = 65
 try:
@@ -20,7 +23,7 @@ try:
         if confidence<=thresh:
             ser.write('unkown\n')
         else:
-            ser.write(name+'\n')
+            ser.write(bytes(name)+'\n')
         print name + '    ' + str(confidence)
 except KeyboardInterrupt:
     cam.close()

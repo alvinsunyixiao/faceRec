@@ -16,7 +16,9 @@ def capture_face(api,dir):
 
 def recgonize(cam, dir = 'buf.jpg'):
     api = API(API_KEY, API_SECRET)
-    cam.capture(dir)
+    #cam.capture(dir)
+    ret, img = cam.read()
+    cv2.imwrite(dir,img)
     result = api.recognition.identify(img = File(dir), group_name = 'test')
     if (len(result['face'])==0):
         return None
@@ -54,7 +56,9 @@ class Person:
         i=0
         while i < 10:
     	    print i
-            self.cam.capture(self.bufferDir)
+            #self.cam.capture(self.bufferDir)
+            ret, img = self.cam.read()
+            cv2.imwrite(self.bufferDir,img)
             result = capture_face(self.api,self.bufferDir)
             if result == None:
                 continue
